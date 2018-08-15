@@ -9,14 +9,16 @@ pictureOfRecord= loadImage("record.jpg");  //in setup method
 pictureOfRecord.resize(width,height);
 minim = new Minim(this);  //in the setup method
 song = minim.loadFile("Halo Theme Song Original.mp3", 512);//in the setup method
-song.play();
 }
 void draw(){
-if(mousePressed){
+  if(mousePressed){
+  song.play();
   rotateImage(pictureOfRecord,rotate);
-image(pictureOfRecord,0,0);
 rotate += 10;
+}else {
+  song.pause();
 }
+image(pictureOfRecord,0,0);
 }
 void rotateImage(PImage image, int amountToRotate) {
      translate(width/2, height/2);

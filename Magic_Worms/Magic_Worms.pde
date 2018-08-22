@@ -1,18 +1,17 @@
-int x = 0;
-int y = 0;
+float x = 0;
+float y = 0;
 void setup(){
   size(800,800);
   background(0,0,0);
 }
 void draw(){
    makeMagical(); 
-   for(int i = 0;;){
-     
-   }
-  x=(int)getWormX((int)random(width));
-  y=(int)getWormX((int)random(width));
+   for(int i = 0;i<300;i++){
+  x=getWormX(i);
+  y=getWormY(i);
   fill(frameCount,frameCount,frameCount);
- ellipse(x,y, 50,50);
+ ellipse(x,y, 20,20);
+   }
 }
 float frequency = .001;
 float noiseInterval = PI;

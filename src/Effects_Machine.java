@@ -40,6 +40,9 @@ public class Effects_Machine implements ActionListener {
 		Panel.add(Button);
 		Panel.add(Button2);
 		Panel.add(Button3);
+		Button.addActionListener(this);
+		Button2.addActionListener(this);
+		Button3.addActionListener(this);
 		Frame.pack();
 	}
 
